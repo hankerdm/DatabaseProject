@@ -1,6 +1,6 @@
 <?php
-	const SERVERNAME = "localhost";
+	const SERVERNAME = "dbdb.cjxnup8stayy.us-east-2.rds.amazonaws.com";
 	const USERNAME = "root";
-	const PASSWORD = "";
+	const PASSWORD = "DBPassword";
 	const DBNAME = "chart";
 ?>
