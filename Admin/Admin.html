@@ -1,0 +1,130 @@
+<html lang="en">
+
+	<head>
+		<title>Admin</title>
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+		
+		<link rel="stylesheet" href="../CSS/HomePageCSS.css">
+		<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+	</head>
+
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<header class="mdl-layout__header">
+			
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+							mdl-textfield--floating-label mdl-textfield--align-left" >
+					
+					<a href = "../Chart_Search/Chart_Search.php">
+					<label id="tt5" class="material-icons mdl-badge mdl-badge--overlap">home</label></a>  
+					<div class="mdl-tooltip" for="tt5">Home</div>
+					
+					<a href = "../New_Patient/New_Patient.html">
+					<label id="tt2" class="material-icons mdl-badge mdl-badge--overlap">account_box</label></a>  
+					<div class="mdl-tooltip" for="tt2">New Patient</div>
+					
+					<a href = "../SignIn/Login.html">
+					<label id="tt4" class="material-icons mdl-badge mdl-badge--overlap">power_settings_new</label></a>
+					<div class="mdl-tooltip" for="tt4">Sign-Out</div>
+					
+					<a href = "../Chart_Search/Chart_Search.php">
+					<label id="tt1" class="material-icons mdl-badge mdl-badge--overlap">search</label></a>
+					<div class="mdl-tooltip" for="tt1">Chart Search</div>
+					
+				</div>
+			</header>
+		</div>
+		
+		<br></br><br></br>
+		<div><br>
+		<h1 style = "text-align: center; font-size:60px;" > Administrator Options </h1>
+		</br></div>
+		
+		<table CELLPADDING="30" CELLSPACING="30" align="center" style=" width:1000px; height:550px">
+			<td>
+				<div style="margin-bottom:50px"> 
+					<table id="Details" class="center" CELLSPACING="30">
+						<td><form id = "NewEmployee" action = "../PHP/NewEmployee.php" method = "post">
+						<h2 style="text-align: center">New Employee:</h2>
+							<label><br>First Name:</br></label>
+							<input id = "fname" type="text" style="width:350px" name="fname" placeholder = "First Name" /></br>
+							<label><br>Last Name:</br></label>
+							<input id = "lname" type="text" name="lname" placeholder = "Last Name" /></br>
+							<label><br>DOB:</br></label>
+							<input id = "DOB" type="text" name="DOB" placeholder = "##/##/####" /></br>
+							<label><br>Position:</br></label>
+							<input id = "Position" type="text" name="Position" placeholder = "Physician"/></br>
+							<label><br>Shift:</br></label>
+							<input id = "Shift" type="text" name="Shift" placeholder ="Afternoon" /></br>
+							<label><br>Team Name:</br></label>
+							<input id = "tName" type="text" name="tName" placeholder = "Team Name" /></br>
+							<label><br>license:</br></label>
+							<input id = "Licence" type="text" name="Licence" placeholder ="MD15481" /></br>
+							<label><br>Password:</br></label>
+							<input id = "Password" type="text" name="Password" placeholder ="New Employee Password" /></br>
+							<label><br>Employee ID:</br></label>
+							<input id = "Employee_ID" type="text" name="Employee_ID" placeholder ="123456789" />
+							<input class = "button" type = "submit" name = "NewEmployee" value = "New Employee" />
+						</form></td>
+					</table>
+				</div>
+				
+				<div> 
+					<table id="details" class="center" CELLSPACING="30">
+						<td><form id = "New_Department" action = "../PHP/New_Department.php" method = "post">
+						<h2 style="text-align: center">New Department:</h2>
+							<label><br>Department Name:</br></label>
+							<input id = "dName" type="text" name="dName" placeholder = "Department Name" /></br>
+							<label><br>Beds:</br></label>
+							<input id = "Beds" type="text" name="Beds" placeholder = "25"/></br>
+							<label><br>Specialty:</br></label>
+							<input id = "Specialty" type="text" name="Specialty" placeholder ="Cardiology" /></br>
+							<input class = "button" type = "submit" name = "New_Department" value = "New Department" />
+						</form></td>
+					</table>
+				</div>
+			</td>
+			
+			<td>
+				<div style="margin-bottom:125px"> 
+					<table id="indication" class="center" CELLSPACING="30">
+						<td><form id = "New_Team" action = "../PHP/New_Team.php" method = "post">
+						<h2 style="text-align: center">New Team:</h2>
+							<label><br>Team Name:</br></label>
+							<input id = "tName" type="text" name="tName" placeholder = "Team Name" /></br>
+							<label><br>Department:</br></label>
+							<input id = "Department" type="text" name="Department" placeholder = "Department"/></br>
+							<label><br>Shift:</br></label>
+							<input id = "Shift" type="text" name="Shift" placeholder ="Afternoon" /></br>
+							<input class = "button" type = "submit" name = "New_Team" value = "New Team" />
+						</form></td>
+					</table>
+				</div>
+				
+				<div style="margin-bottom:125px"> 
+					<table id="Indication" class="center" CELLSPACING="30">
+						<td><form id = "Delete_Employee" action = "../PHP/Delete_Employee.php" method = "post">
+						<h2 style="text-align: center">Delete Employee:</h2>
+							<label><br>Employee ID:</br></label>
+							<input id = "Employee_ID" type="text" name="Employee_ID" placeholder ="123456789" /></br>
+							<input class = "button" type = "submit" name = "Delete_Employee" value = "Delete Employee" />
+						</form></td>
+					</table>
+				</div>
+
+				<div> 
+					<table id="Indication" class="center" CELLSPACING="30">
+						<td><form id = "Delete_Patient" action = "../PHP/Delete_Patient.php" method = "post">
+						<h2 style="text-align: center">Delete Patient:</h2>
+							<label><br>SSN:</br></label>
+							<input id = "SSN" type="text" name="SSN" placeholder ="123-45-6789" /></br>
+							<input class = "button" type = "submit" name = "Delete_Patient" value = "Delete Patient" />
+						</form></td>
+					</table>
+				</div>
+			</td>
+		</table>
+	</body>
+</html>

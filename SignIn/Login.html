@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" type="text/css" href="../CSS/SignInCSS.css">
+	</head>
+	<body>
+		<h1 id = "Company" style = "text-align: center" > Princeton-Plainsboro Teaching Hospital </h1>
+		<table id = "tables" class = "center" CELLPADDING="30" CELLSPACING="30">
+			<td>
+				<div>
+					<h3 style="text-align: center">Sign-In:</h3>
+					<p id="messageAlert" style = "text-align: center"></p>
+					<form id ="Sign-In" action = "../PHP/signIn.php" method = "post">
+						<label><br>Username:</br></label>
+						<input id = "usernameEmail" type="text" name="usernameEmail" placeholder = "Someone@domain.com" />
+						<label><br>Password:</br></label>
+						<input id = "password" type="password" name="password" placeholder = "Password"/>
+						<input class = "button button1" type = "submit" name = "SignIn" value = "Sign-In">
+					</form>
+				</div>
+			</td>
+		</table>
+	</body>
+</html>
+<script>
+	document.getElementById("Sign-In").addEventListener("submit",
+	function(e)
+	{
+		var emailRegex = new RegExp('^[.0-9A-Z_a-z]+@[.0-9A-Z_a-z]+.[a-zA-Z]{3}$');
+		var userName = document.getElementById("usernameEmail").value;
+		var pass = document.getElementById("password").value;
+		if ((userName == null || userName == "") || !emailRegex.test(userName)) {
+			e.preventDefault();
+			document.getElementById("messageAlert").innerHTML = "Invalid username";
+		}
+		else if (pass == null || pass == "") {
+			e.preventDefault();
+			document.getElementById("messageAlert").innerHTML = "Please enter a password";
+		}
+	});
+</script>
