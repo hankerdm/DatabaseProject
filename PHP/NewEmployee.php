@@ -10,7 +10,7 @@
 	$Position = filter_input(INPUT_POST, 'Position');
 	$Shift = filter_input(INPUT_POST, 'Shift');
 	$Licence = filter_input(INPUT_POST, 'Licence');
-	$password = filter_input(INPUT_POST, 'passwordNew');
+	$password = filter_input(INPUT_POST, 'Password');
 	$Employee_ID = filter_input(INPUT_POST, 'Employee_ID');
 	$tName = filter_input(INPUT_POST, 'tName');
 	$hash = password_hash($password, PASSWORD_DEFAULT);

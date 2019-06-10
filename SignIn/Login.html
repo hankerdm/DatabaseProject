@@ -13,7 +13,7 @@
 					<p id="messageAlert" style = "text-align: center"></p>
 					<form id ="Sign-In" action = "../PHP/signIn.php" method = "post">
 						<label><br>Username:</br></label>
-						<input id = "usernameEmail" type="text" name="usernameEmail" placeholder = "Someone@domain.com" />
+						<input id = "username" type="text" name="username" placeholder = "Employee ID" />
 						<label><br>Password:</br></label>
 						<input id = "password" type="password" name="password" placeholder = "Password"/>
 						<input class = "button button1" type = "submit" name = "SignIn" value = "Sign-In">
@@ -27,10 +27,9 @@
 	document.getElementById("Sign-In").addEventListener("submit",
 	function(e)
 	{
-		var emailRegex = new RegExp('^[.0-9A-Z_a-z]+@[.0-9A-Z_a-z]+.[a-zA-Z]{3}$');
 		var userName = document.getElementById("usernameEmail").value;
 		var pass = document.getElementById("password").value;
-		if ((userName == null || userName == "") || !emailRegex.test(userName)) {
+		if (userName == null || userName == "") {
 			e.preventDefault();
 			document.getElementById("messageAlert").innerHTML = "Invalid username";
 		}
