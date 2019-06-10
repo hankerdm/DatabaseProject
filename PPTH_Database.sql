@@ -2,7 +2,6 @@ CREATE TABLE DEPARTMENT (
 	Department_name VARCHAR (50),
     Beds INT,
     Specialty TEXT,
-    Location TEXT,
     PRIMARY KEY (Department_name)
 );
 
