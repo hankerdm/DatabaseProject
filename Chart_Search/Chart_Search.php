@@ -106,7 +106,7 @@
 					
 					//Create Edit patient button
 					if (isset($_POST['searchField'])) {
-						echo '<a href = "../Edit_Patient/Edit_patient.php">';
+						echo '<a href = "../Edit_Patient/Edit_Patient.php">';
 						echo '<input class="button" type="submit" name="EditPatient" value="Edit Patient" style="margin-top:20px; margin-left:75px; margin-bottom:0px;"/></a>';
 					}
 				}
