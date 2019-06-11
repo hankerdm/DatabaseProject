@@ -32,6 +32,17 @@
 					<label id="tt1" class="material-icons mdl-badge mdl-badge--overlap">search</label></a>
 					<div class="mdl-tooltip" for="tt1">Chart Search</div>
 					
+					<?php
+					session_start();
+					$isAdmin = $_SESSION['isAdmin'];
+					if ($isAdmin == 'Administrator')
+					{
+						echo '<a href = "../Admin/Admin.html">';
+						echo '<label id="tt1" class="material-icons mdl-badge mdl-badge--overlap">settings</label></a>';
+						echo '<div class="mdl-tooltip" for="tt1">Admin</div>';
+					}
+					?>
+					
 				</div>
 			</header>
 		</div>
@@ -52,7 +63,6 @@
 			<table id="Details" class="center" CELLSPACING="30">
 			<?php
 				//start session and save variable for edit patient
-				session_start();
 				$userSearch = "";
 				if (isset($_POST['searchField'])) {
 					$userSearch = $_POST['searchField'];

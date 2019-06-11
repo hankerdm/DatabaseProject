@@ -1,6 +1,7 @@
 <?php
 	//get includes for file
 	include ('../PHP/Database.php');
+	session_start();
 	
 	//start get variables from sign in
 	$Employee_ID = $_POST['username'];
@@ -23,10 +24,11 @@
 	{
 		
 		//get stored password hash and test if valid
-		$queryHash = "SELECT Password FROM PROVIDER WHERE Employee_ID = '$Employee_ID'";
+		$queryHash = "SELECT * FROM PROVIDER WHERE Employee_ID = '$Employee_ID'";
 		$resultHash = $mysqli->query($queryHash);
 		$resultHashRow = $resultHash->fetch_assoc();
 		$hash = $resultHashRow['Password'];
+		$_SESSION['isAdmin'] = $resultHashRow['PositionType'];
 		$hash2 = password_hash($password, PASSWORD_DEFAULT);
 
 		if (password_verify($password, $hash))
