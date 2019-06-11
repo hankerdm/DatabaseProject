@@ -38,8 +38,8 @@
 					if ($isAdmin == 'Administrator')
 					{
 						echo '<a href = "../Admin/Admin.html">';
-						echo '<label id="tt1" class="material-icons mdl-badge mdl-badge--overlap">settings</label></a>';
-						echo '<div class="mdl-tooltip" for="tt1">Admin</div>';
+						echo '<label id="tt3" class="material-icons mdl-badge mdl-badge--overlap">settings</label></a>';
+						echo '<div class="mdl-tooltip" for="tt3">Admin</div>';
 					}
 					?>
 					
